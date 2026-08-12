@@ -63,4 +63,5 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export const runtime = 'edge';
+// Remove edge runtime - use Node.js runtime instead
+export const runtime = 'nodejs';
