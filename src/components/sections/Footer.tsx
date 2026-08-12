@@ -126,18 +126,12 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-lg bg-white/15 backdrop-blur-sm flex items-center justify-center">
-                <Snowflake className="h-5 w-5 text-brand-yellow" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-brand-red-light font-extrabold text-lg leading-tight">
-                  MASTECH
-                </span>
-                <span className="text-brand-yellow-light text-[10px] font-semibold tracking-wider uppercase leading-tight">
-                  Cooling Technology
-                </span>
-              </div>
+            <Link href="/" className="flex items-center mb-5 group">
+              <img
+                src="/mastech-logo.jpeg"
+                alt="Mastech Cooling Technology - Masters in Cooling"
+                className="h-16 w-auto lg:h-20 lg:w-auto object-contain rounded-xl shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl brightness-110"
+              />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-5">
               Your trusted partner for all your car air conditioning needs.

@@ -98,24 +98,14 @@ export default function Header({
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center gap-3 group"
+              className="flex items-center group"
               aria-label="Go to home"
             >
-              <div className="relative">
-                <img
-                  src="/mastech-logo.png"
-                  alt="Mastech Cooling Technology"
-                  className="h-10 w-10 lg:h-12 lg:w-12 object-contain"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-brand-red font-extrabold text-lg lg:text-xl leading-tight tracking-tight">
-                  MASTECH
-                </span>
-                <span className="text-brand-purple text-[10px] lg:text-xs font-semibold tracking-wider uppercase leading-tight">
-                  Cooling Technology
-                </span>
-              </div>
+              <img
+                src="/mastech-logo.jpeg"
+                alt="Mastech Cooling Technology - Car Air Conditioning Specialists"
+                className="h-14 w-auto lg:h-20 lg:w-auto object-contain rounded-xl shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md"
+              />
             </Link>
 
             {/* Desktop Navigation */}
