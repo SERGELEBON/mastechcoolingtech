@@ -34,10 +34,10 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Address",
-    value: "Industrial Zone, Antananarivo",
-    href: "#",
+    value: "Kissiman Behind Pure Fire Church, off Ghana Airways Rd., Accra",
+    href: "https://maps.google.com/?q=Kissiman+Behind+Pure+Fire+Church+off+Ghana+Airways+Road+Accra+Ghana",
     description:
-      "Find our workshop in the industrial zone of the capital, easily accessible for dropping off your vehicle at your convenience.",
+      "Find our workshop in Kissiman, easily accessible behind Pure Fire Church off Ghana Airways Road. Convenient location for dropping off your vehicle.",
   },
   {
     icon: Clock,
@@ -109,6 +109,8 @@ export default function Contact() {
               <a
                 key={info.label}
                 href={info.href}
+                target={info.label === "Address" ? "_blank" : undefined}
+                rel={info.label === "Address" ? "noopener noreferrer" : undefined}
                 className="flex items-start gap-4 p-5 rounded-xl border border-border hover:border-brand-purple/30 hover:shadow-md transition-all duration-300 group"
               >
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-purple/10 flex items-center justify-center group-hover:bg-brand-purple transition-colors duration-300">
@@ -127,6 +129,26 @@ export default function Contact() {
                 </div>
               </a>
             ))}
+
+            {/* Google Map */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="rounded-xl overflow-hidden border border-border shadow-md h-[300px]"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.8076869722584!2d-0.1736!3d5.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzYnMTMuMyJOIDDCsDEwJzI1LjAiVw!5e0!3m2!1sen!2sgh!4v1234567890123!5m2!1sen!2sgh&q=Kissiman+Behind+Pure+Fire+Church+off+Ghana+Airways+Road+Accra+Ghana"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Mastech Cooling Technology Location - Kissiman, Accra"
+              ></iframe>
+            </motion.div>
           </motion.div>
 
           {/* Contact form */}

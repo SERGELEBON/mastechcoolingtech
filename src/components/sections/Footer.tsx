@@ -200,9 +200,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-brand-yellow mt-0.5 flex-shrink-0" />
-                <span className="text-white/70 text-sm">
-                  Spintex Road, Accra, Ghana
-                </span>
+                <a
+                  href="https://maps.google.com/?q=Kissiman+Behind+Pure+Fire+Church+off+Ghana+Airways+Road+Accra+Ghana"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 text-sm hover:text-white transition-colors"
+                >
+                  Kissiman Behind Pure Fire Church,<br />
+                  off Ghana Airways Rd., Accra, Ghana
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-brand-yellow flex-shrink-0" />

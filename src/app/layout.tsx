@@ -112,12 +112,16 @@ export default function RootLayout({
     "email": "contact@mastechcooling.com",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "GH",
+      "streetAddress": "Kissiman Behind Pure Fire Church, off Ghana Airways Road",
       "addressLocality": "Accra",
+      "addressRegion": "Greater Accra",
+      "postalCode": "P.O. Box 2531",
+      "addressCountry": "GH",
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "addressCountry": "Ghana",
+      "latitude": "5.6037",
+      "longitude": "-0.1736",
     },
     "openingHoursSpecification": [
       {
