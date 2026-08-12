@@ -1,9 +1,6 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -13,20 +10,158 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  name      String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+// ============================================
+// AUTHENTIFICATION ADMIN
+// ============================================
+
+model Admin {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  password      String    // Hashed avec bcrypt
+  name          String
+  lastLogin     DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
 }
 
-model Post {
-  id        String   @id @default(cuid())
-  title     String
-  content   String?
-  published Boolean  @default(false)
-  authorId  String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+// ============================================
+// HERO CAROUSEL SLIDES
+// ============================================
+
+model HeroSlide {
+  id            String   @id @default(cuid())
+  order         Int      @unique
+  image         String
+  icon          String   // Nom de l'icône Lucide
+  badge         String
+  title         String
+  titleAccent   String
+  description   String
+  tagline       String
+  active        Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+// ============================================
+// SERVICES
+// ============================================
+
+model Service {
+  id                String            @id // "diagnostic", "repair", "recharge", "cleaning"
+  icon              String
+  image             String
+  title             String
+  subtitle          String
+  heroDescription   String
+  color             String
+  longDescription   String
+  order             Int
+  active            Boolean           @default(true)
+  benefits          ServiceBenefit[]
+  process           ServiceProcess[]
+  features          ServiceFeature[]
+  faqs              ServiceFAQ[]
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+}
+
+model ServiceBenefit {
+  id          String   @id @default(cuid())
+  serviceId   String
+  service     Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  title       String
+  description String
+  order       Int
+}
+
+model ServiceProcess {
+  id          String   @id @default(cuid())
+  serviceId   String
+  service     Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  step        Int
+  title       String
+  description String
+}
+
+model ServiceFeature {
+  id          String   @id @default(cuid())
+  serviceId   String
+  service     Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  text        String
+  order       Int
+}
+
+model ServiceFAQ {
+  id          String   @id @default(cuid())
+  serviceId   String
+  service     Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  question    String
+  answer      String
+  order       Int
+}
+
+// ============================================
+// TÉMOIGNAGES
+// ============================================
+
+model Testimonial {
+  id          String   @id @default(cuid())
+  name        String
+  role        String
+  location    String
+  rating      Int      // 1-5
+  text        String
+  initials    String
+  color       String   // Gradient CSS
+  order       Int      @unique
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ============================================
+// CONTENUS DE SECTIONS (About, Why Choose, FAQ...)
+// ============================================
+
+model SectionContent {
+  id          String   @id @default(cuid())
+  slug        String   @unique // "about", "why-choose-us", "faq-section"
+  title       String
+  subtitle    String?
+  content     String   // JSON stringifié pour structure flexible
+  updatedAt   DateTime @updatedAt
+}
+
+// ============================================
+// INFORMATIONS DE CONTACT
+// ============================================
+
+model ContactInfo {
+  id          String   @id @default(cuid())
+  phone       String
+  email       String
+  address     String
+  addressLink String
+  poBox       String?
+  hours       String
+  latitude    String?
+  longitude   String?
+  updatedAt   DateTime @updatedAt
+}
+
+// ============================================
+// GESTIONNAIRE DE MÉDIAS
+// ============================================
+
+model Media {
+  id          String   @id @default(cuid())
+  filename    String
+  url         String
+  type        String   // "image" | "video"
+  category    String?  // "hero", "service", "general"
+  size        Int      // bytes
+  mimeType    String
+  alt         String?
+  uploadedAt  DateTime @default(now())
 }
