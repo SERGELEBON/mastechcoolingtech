@@ -25,7 +25,7 @@ const serviceCards: {
   {
     id: "diagnostic",
     icon: Search,
-    image: "/service-diagnostic.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im5-HunZwPynPcTu901CDjEfhDkCcourxO.jpeg",
     title: "Electronic Diagnostics",
     subtitle: "Precise fault detection",
     shortDescription:
@@ -36,7 +36,7 @@ const serviceCards: {
   {
     id: "repair",
     icon: Wrench,
-    image: "/service-repair.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im2-CMO6ARnalN45btugaLzKyqGurbKsda.jpeg",
     title: "Repair & Maintenance",
     subtitle: "Compressors, condensers, evaporators",
     shortDescription:
@@ -47,7 +47,7 @@ const serviceCards: {
   {
     id: "recharge",
     icon: Droplets,
-    image: "/service-recharge.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im1-o4nzBlpeMn6X0rGmur1BbjVMOZ3dCo.jpeg",
     title: "Refrigerant Recharge",
     subtitle: "Professional AC gas service",
     shortDescription:
@@ -58,7 +58,7 @@ const serviceCards: {
   {
     id: "cleaning",
     icon: Sparkles,
-    image: "/service-cleaning.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im4-Bi2JHNVvvX6ooG467vuVUw6u1nrxLN.jpeg",
     title: "System Cleaning",
     subtitle: "Longevity & performance",
     shortDescription:

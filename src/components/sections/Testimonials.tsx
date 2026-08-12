@@ -31,33 +31,6 @@ const testimonials = [
     initials: "YA",
     color: "from-brand-yellow to-brand-gold",
   },
-  {
-    name: "Ama Boateng",
-    role: "Hyundai Elantra Owner",
-    location: "Accra",
-    rating: 5,
-    text: "The team at Mastech cleaned my AC system and the difference is night and day — no more bad smells and the air flow is so much stronger. They explained everything they did. Excellent customer service.",
-    initials: "AB",
-    color: "from-brand-purple to-brand-purple-light",
-  },
-  {
-    name: "Kofi Adjei",
-    role: "Nissan Almera Owner",
-    location: "Takoradi",
-    rating: 5,
-    text: "My compressor failed on a hot afternoon. Mastech had the replacement in stock, installed it the same day, and charged less than the dealer quoted me. The warranty gave me peace of mind. Top-notch work.",
-    initials: "KA",
-    color: "from-brand-red to-brand-yellow",
-  },
-  {
-    name: "Esi Dankwah",
-    role: "Kia Sportage Owner",
-    location: "Accra",
-    rating: 5,
-    text: "What I love about Mastech is their honesty. They told me my AC didn't need a full recharge yet — just a top-up and a cleaning. Saved me money. That kind of integrity is rare. I'll definitely return for my next service.",
-    initials: "ED",
-    color: "from-brand-purple-dark to-brand-purple",
-  },
 ];
 
 const containerVariants = {

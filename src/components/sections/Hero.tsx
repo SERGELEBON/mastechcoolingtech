@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 // All images feature Black Ghanaian mechanics
 const slides = [
   {
-    image: "/hero-bg.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im1-o4nzBlpeMn6X0rGmur1BbjVMOZ3dCo.jpeg",
     icon: Snowflake,
     badge: "Car Air Conditioning Experts",
     title: "MASTECH",
@@ -29,7 +29,7 @@ const slides = [
     tagline: "Masters in Cooling",
   },
   {
-    image: "/service-diagnostic.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im4-Bi2JHNVvvX6ooG467vuVUw6u1nrxLN.jpeg",
     icon: Search,
     badge: "Service 1 of 4",
     title: "Electronic",
@@ -39,7 +39,7 @@ const slides = [
     tagline: "Precision You Can Trust",
   },
   {
-    image: "/service-repair.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im3-BMoRdeP6QgadfFrsZDFg8BHvwgucnO.jpeg",
     icon: Wrench,
     badge: "Service 2 of 4",
     title: "Repair &",
@@ -49,7 +49,7 @@ const slides = [
     tagline: "Built to Last",
   },
   {
-    image: "/service-recharge.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im2-CMO6ARnalN45btugaLzKyqGurbKsda.jpeg",
     icon: Droplets,
     badge: "Service 3 of 4",
     title: "Refrigerant",
@@ -59,7 +59,7 @@ const slides = [
     tagline: "Cool Air Restored",
   },
   {
-    image: "/service-cleaning.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im5-HunZwPynPcTu901CDjEfhDkCcourxO.jpeg",
     icon: Sparkles,
     badge: "Service 4 of 4",
     title: "System",
@@ -105,7 +105,6 @@ export default function Hero() {
   };
 
   const slide = slides[current];
-  const SlideIcon = slide.icon;
 
   return (
     <section
@@ -158,19 +157,8 @@ export default function Hero() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5 }}
             >
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-                <SlideIcon className="h-4 w-4 text-brand-yellow" />
-                <span
-                  className="text-brand-yellow-light text-sm font-medium"
-                  suppressHydrationWarning
-                >
-                  {slide.badge}
-                </span>
-              </div>
-
               {/* Title */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
                 <span className="text-brand-red" suppressHydrationWarning>
                   {slide.title}
                 </span>
@@ -185,7 +173,7 @@ export default function Hero() {
 
               {/* Description */}
               <p
-                className="text-lg sm:text-xl text-white/85 mb-4 max-w-xl"
+                className="text-2xl sm:text-2xl font-bold text-white/85 mb-4 max-w-xl"
                 suppressHydrationWarning
               >
                 {slide.description}
