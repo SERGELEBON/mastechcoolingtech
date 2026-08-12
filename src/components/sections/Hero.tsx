@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 // All images feature Black Ghanaian mechanics
 const slides = [
   {
-    image: "/hero-bg.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im1-o4nzBlpeMn6X0rGmur1BbjVMOZ3dCo.jpeg",
     icon: Snowflake,
     badge: "Car Air Conditioning Experts",
     title: "MASTECH",
@@ -29,7 +29,7 @@ const slides = [
     tagline: "Masters in Cooling",
   },
   {
-    image: "/service-diagnostic.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im4-Bi2JHNVvvX6ooG467vuVUw6u1nrxLN.jpeg",
     icon: Search,
     badge: "Service 1 of 4",
     title: "Electronic",
@@ -39,7 +39,7 @@ const slides = [
     tagline: "Precision You Can Trust",
   },
   {
-    image: "/service-repair.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im3-BMoRdeP6QgadfFrsZDFg8BHvwgucnO.jpeg",
     icon: Wrench,
     badge: "Service 2 of 4",
     title: "Repair &",
@@ -49,7 +49,7 @@ const slides = [
     tagline: "Built to Last",
   },
   {
-    image: "/service-recharge.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im2-CMO6ARnalN45btugaLzKyqGurbKsda.jpeg",
     icon: Droplets,
     badge: "Service 3 of 4",
     title: "Refrigerant",
@@ -59,7 +59,7 @@ const slides = [
     tagline: "Cool Air Restored",
   },
   {
-    image: "/service-cleaning.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/im5-HunZwPynPcTu901CDjEfhDkCcourxO.jpeg",
     icon: Sparkles,
     badge: "Service 4 of 4",
     title: "System",
