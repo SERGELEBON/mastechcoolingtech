@@ -53,3 +53,31 @@ server.log
 # Skills directory
 /skills/.env
 prisma/dev.db
+
+# --- Security & hygiene (standard) ---
+# Environment / secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.*.template
+*.key
+*.p12
+*.pfx
+*.jks
+
+# IDE / editor
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# OS
+Thumbs.db
+
+
+# Build / caches
+.gradle/
+.netlify/
+.expo/
